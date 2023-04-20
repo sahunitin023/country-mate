@@ -22,9 +22,7 @@ class _CountryMateState extends State<CountryMate> {
   int _selectedIndex = 0;
   final List<Widget> _pages = <Widget>[
     const HomeScreen(),
-    const Placeholder(),
     const SettingsScreen(),
-    const Placeholder(),
   ];
 
   void _onItemTapped(int index) {
@@ -110,39 +108,15 @@ class _CountryMateState extends State<CountryMate> {
                           BottomNavigationBarItem(
                             backgroundColor: kSecondaryColor,
                             icon: Image.asset(
-                              'images/search.png',
+                              _selectedIndex == 1
+                                  ? 'images/settings_solid.png'
+                                  : 'images/settings.png',
                               height: 35,
                               color: _selectedIndex == 1
                                   ? kPrimaryColor
                                   : const Color.fromARGB(155, 74, 61, 255),
                             ),
-                            label: 'Search',
-                          ),
-                          BottomNavigationBarItem(
-                            backgroundColor: kSecondaryColor,
-                            icon: Image.asset(
-                              _selectedIndex == 2
-                                  ? 'images/settings_solid.png'
-                                  : 'images/settings.png',
-                              height: 35,
-                              color: _selectedIndex == 2
-                                  ? kPrimaryColor
-                                  : const Color.fromARGB(155, 74, 61, 255),
-                            ),
                             label: 'Settings',
-                          ),
-                          BottomNavigationBarItem(
-                            backgroundColor: kSecondaryColor,
-                            icon: Image.asset(
-                              _selectedIndex == 3
-                                  ? 'images/profile_solid.png'
-                                  : 'images/profile.png',
-                              height: 35,
-                              color: _selectedIndex == 3
-                                  ? kPrimaryColor
-                                  : const Color.fromARGB(155, 74, 61, 255),
-                            ),
-                            label: 'Profile',
                           ),
                         ],
                       ),

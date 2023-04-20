@@ -216,6 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
             text: selectedCountry,
             fontWeight: FontWeight.w800,
             size: 50.0,
+            overflow: TextOverflow.visible,
           ),
           const SizedBox(
             height: 30.0,
